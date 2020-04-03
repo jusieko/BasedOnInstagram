@@ -1,0 +1,192 @@
+.Container{
+	background-color: #FFFFCC;;
+	
+}
+#HeaderContainer{
+	
+    
+    display: flex;
+    align-items: stretch;
+
+}
+#Header{
+background-color: #FFFFCC;
+width:25%;
+float:left;
+}
+
+#Header1{
+
+background-color: #FFFFCC;
+width:50%;
+float:left;
+}
+
+#Header2{
+	
+
+background-color:#FFFFCC;
+width:25%;
+float:left;
+
+}
+
+
+.logo{
+
+width:100%;
+	
+	
+}
+.cam{
+	width:5%;
+	margin-right: 2px;
+	float:left;
+}
+.tag{
+	
+	float:left;
+}
+.Zdjecie{
+	clear:both;
+}
+	
+.Komentarze{
+	border-bottom: 3px solid #4C1130 ;
+}
+.Opis{
+	border-bottom: 3px solid #4C1130 ;
+}
+.Left{
+clear:both;
+float:left;	
+width: 25%;
+	background-color: #FFFFCC;
+	color: #FFFFCC;
+}
+
+.Center
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	float:left;
+	width: 50%;
+	background-color: #D19275;
+	border: 3px solid #4C1130 ;
+	
+}
+
+
+#Right{
+	float:left;
+	width: 25%;
+	background-color: #FFFFCC;
+	
+	
+}
+
+#Footer{
+	clear:both;
+	background-color: #FFFFCC;
+	
+}
+
+
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	display: inline;
+	white-space: nowrap;
+}
+
+
+ul a:link, ul a:visited {
+	text-decoration: none;
+	display: block;
+	
+	text-align: center;
+	padding: 5px 0;
+	font-weight: bold;
+	background-color: #4C1130;
+	color: #def;
+	border-top: 10px solid #FFFFCC;;
+}
+
+ul a:hover {
+	background-color: #CC6666;
+	color: #fff;
+	border-top: 20px solid #FFFFCC;;
+}
+ 
+.CommentText{
+	 float:left;
+	 height:25px;
+	 width:80%
+	 
+ }
+.add{
+	
+	float:left;
+	margin-left:1%;
+	margin-top:3px;
+	width:17%;
+	text-decoration: none;
+	display: block;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	background-color: #4C1130;
+	color: #def;
+	height:25px;
+
+	
+}
+
+.add:hover{
+	background-color: #CC6666;
+	color: #fff;
+	border-top: 2px solid #FFFFCC;;
+}
+.formularz{
+	clear: both;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.potwierdz{
+	
+	clear: both;
+	margin-left:1%;
+	margin-top:3px;
+	width:13%;
+	text-decoration: none;
+
+	
+	text-align: center;
+	
+	font-weight: bold;
+	background-color: #4C1130;
+	color: #def;
+	height:25px;
+
+	
+}
+
+.potwierdz:hover{
+	background-color: #CC6666;
+	color: #fff;
+	border-top: 2px solid #FFFFCC;;
+}
+.pcontainer{
+	text-align: center;
+}
+#win{
+	width: 200;
+	height: 100;
+}

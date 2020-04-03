@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+ <link rel="stylesheet" type="text/css" href="{% static "styles/arkusz.css"%}">
+</head>
+<div class="container">
+
+
+
+ <form action = "register" method="POST">
+ 
+<div class='formularz'>
+{% csrf_token %}
+<input type="text" value="podaj imie" name="first_name"> </input>
+</div>
+<div class='formularz'>
+<input type="text" value="podaj naziwsko" name='last_name'> </input>
+</div>
+<div class='formularz'>
+<input type="text" value="podaj email" name='email'> </input>
+</div>
+<div class='formularz'>
+<input type="text" value="podaj username" name='username'> </input>
+</div>
+<div class='formularz'>
+<input type="password" value="podaj haslo"name='password'> </input>
+</div>
+<div class="pcontainer">
+   
+    <input type="Submit" class="potwierdz" value="Commit">
+    <input type="button" class="potwierdz" value="Main"onclick="location.href='..';" />
+    <input type="button" class="potwierdz" value="Log in" onclick="location.href='login';" />
+    
+
+
+</div>
+</form>
+<div>
+    {% for message in messages  %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+</div>
+
+</div>
+<body>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

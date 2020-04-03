@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Logowanie</title>
+  <meta name="description" content="Logowanie">
+  <meta name="author" content="SitePoint">
+
+ <link rel="stylesheet" type="text/css" href="{% static "styles/arkusz.css"%}">
+</head>
+<div class="container">
+
+
+
+<form method="post">
+ {% csrf_token %}
+<div class='formularz'>
+<input type="text"name='username' value="username"></input>
+</div>
+<div class='formularz'>
+<input type="password" value="Podaj haslo" name='password'> </input>
+</div>
+
+<div class="pcontainer">
+   
+<input type="Submit" class="potwierdz" value="Commit" onclick="location.href='{% url 'index' %}'">
+<input type="button" class="potwierdz" value="Main"onclick="location.href='..';" />
+    <input type="button" class="potwierdz" value="Register" onclick="location.href='register';" />
+    
+
+
+</div>
+</form>
+ <div>
+    {% for message in messages  %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+    </div>
+
+</div>
+<body>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

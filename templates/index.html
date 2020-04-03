@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="plik.js"></script>
+<title>Insta</title>
+
+<link rel="stylesheet" type="text/css" href="{% static "styles/arkusz.css"%}">
+</head>
+<body>
+<div class="Container">
+
+<div id="HeaderContainer">
+
+<div id="Header">
+
+</div>
+
+<div id="Header1">
+<img src="{% static "images/logo.png"%}" alt="Logo strony" class="logo" >
+<section>
+<nav>
+<ul>
+{% if user.is_authenticated == False%}
+<li><a href="accounts/register">Register</a></li>
+<li><a href="accounts/login">Log in </a></li>
+{% endif %}
+{% if user.is_authenticated %}
+<li><a href="add/photo">Add Photo</a></li>
+<li><a href="accounts/logout">Log out </a></li>
+{% endif %}
+</nav>
+</div>
+
+<div id="Header2">
+
+
+
+</div>
+
+</div>
+
+{% for pic in images  %}
+<!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   //-->
+
+
+<div class="Left">
+ b
+</div>
+
+
+<div class="Center">
+
+
+<div class="Nazwa">
+<img src="{% static "images/camera.png"%}"  class="cam" >
+<div class="tag"> <h3>{{pic.username}}</h3></div>
+</div>
+<div class="Zdjecie">
+
+<img src="{{pic.image.url}}"  class="logo" >
+</div>
+<div class="Opis">
+<div class="Opis2">
+<b>Description: </b> {{pic.description}}
+</div>
+</div>
+<div class="Komentarze">
+{% for com  in comments  %}
+<div class="Komentarz">
+{% ifequal pic.id com.photo_id %}
+
+
+<b>Comment from '{{com.username}}': </b> {{com.content}}  
+{% endifequal %}
+</div>
+{% endfor %}
+</div>
+<div class="DodajKomentarz">
+{% if user.is_authenticated %}
+
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="hidden" name="txt" value={{pic.id}}>
+ <input type="Submit" class="add" value="Add">
+ </form>
+</form>
+{% endif %}
+</div>
+</div>
+{% endfor %}
+<!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   //-->
+
+
+<div id="Right">
+
+</div>
+
+<div id="Footer">
+
+
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>
